@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Notes Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Smart Notes Planner</h1>
+        <p>Пишите заметки — превращайте их в понятные задачи.</p>
+      </header>
+
+      <section class="composer card">
+        <label for="notesInput" class="composer__label">Заметки</label>
+        <textarea
+          id="notesInput"
+          rows="6"
+          placeholder="Купить подарок маме&#10;Позвонить стоматологу&#10;Подготовить документы до пятницы"
+        ></textarea>
+        <button id="convertBtn" class="button">Преобразовать в задачи</button>
+      </section>
+
+      <section class="tasks card">
+        <div class="tasks__header">
+          <h2>Список задач</h2>
+          <span id="tasksCount" aria-live="polite">0 задач</span>
+        </div>
+        <ul id="tasksList" class="tasks__list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
